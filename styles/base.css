@@ -1,0 +1,47 @@
+* {
+    font-family: 'Montserrat';
+    font-weight: normal;
+    margin: 0;
+}
+
+/* HEADER */
+header {
+    background-color: lightcyan;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    color: #4A1942;
+    font-family: 'Sacramento';
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+/* MAIN */
+main {
+    margin: 3rem;
+}
+
+section {
+    background-color: lightcyan;
+    margin: 2rem;
+    padding: 1rem;
+    border: 2px solid #4A1942;
+    border-radius: 10px 0px;
+}
+
+h3 {
+    color: #4A1942;
+    font-family: 'Sacramento';
+    font-size: 2rem;
+    border-bottom: 1px solid #4A1942;
+}
+
+/* FOOTER */
+footer {
+    background-color: #4A1942;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
