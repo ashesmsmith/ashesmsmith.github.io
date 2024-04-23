@@ -13,7 +13,7 @@ header {
 
 h1 {
     color: #4A1942;
-    font-family: 'Sacramento';
+    font-family: 'Josefin Slab';
     font-size: 5rem;
     padding: 1rem;
 }
@@ -33,7 +33,7 @@ section {
 
 h3 {
     color: #4A1942;
-    font-family: 'Sacramento';
+    font-family: 'Josefin Slab';
     font-size: 2rem;
     border-bottom: 1px solid #4A1942;
 }
