@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    margin: 3rem;
+}
+
+h1, h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+section {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid darkblue;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#hide-prophets {
+    display: none;
+}
+
+.card {
+    border: 2px solid green;
+}
