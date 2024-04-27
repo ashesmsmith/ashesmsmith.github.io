@@ -8,10 +8,11 @@ console.log(ul);
 const pete = document.body.lastElementChild.previousElementSibling.lastElementChild;
 console.log(pete);
 
-let table = document.body.firstElementChild.children[3];
+let table = document.body.firstElementChild.nextElementSibling.children[3];
+
 for (let i=0; i < table.rows.length; i++) {
     let color = table.rows[i].cells[i];
-    color.style.backgroundColor = 'red';
+    color.style.backgroundColor = 'lightblue';
 }
 
 /* Calculator */
