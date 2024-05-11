@@ -12,3 +12,47 @@ section {
     padding: 1rem;
     border: 1px solid darkblue;
 }
+
+.box {
+    background-color: #0CB2AF;
+    color: white;
+    font-size: 2rem;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    align-content: center;
+    border-radius: 50%;
+    animation: myanima 10s linear 0s 1 alternate;
+}
+
+@keyframes myanima {
+    0% {
+        transform: rotateX(90deg);
+        background-color: #A1C65D;
+    }
+
+    16% {
+        transform: scale(50%);
+        background-color: #FAC723;
+    }
+
+    32% {
+        transform: skew(15deg, 25deg);
+        background-color: #F29222;
+    }
+
+    48% {
+        transform: translate(75px, 25%);
+        background-color: #E95E50;
+    }
+
+    64% {
+        transform: rotate(90deg);
+        background-color: #936FAC;
+    }
+
+    80% {
+        transform: skew(25deg, 15deg);
+        background-color: #0CB2AF;
+    }
+}
