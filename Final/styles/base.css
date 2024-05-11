@@ -1,3 +1,64 @@
 *{
+    font-family: 'Montserrat';
     margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+}
+
+header img {
+    max-width: 95%;
+    height: auto;
+    margin: .5rem;
+}
+
+/* MAIN */
+form {
+    background-image: linear-gradient(#B392AC, #4D3452);
+    background-color: #735D78;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+label {
+    font-family: 'Cormorant';
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+}
+
+input {
+    display: block;
+    margin: .15rem auto .75rem;
+    border: 1px solid #B392AC;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #D1B3C4;
+    font-weight: bold;
+    padding: .5rem 2rem;
+    border: 1px solid #B392AC;
+    border-radius: 10px;
+}
+
+#search-results {
+    padding: 3rem;
+}
+
+h1 {
+    color: #4D3452;
+    font-family: 'Cormorant';
+    font-size: 2rem;
+    border-bottom: 1px solid #735D78;
+}
+
+/* FOOTER */
+footer {
+    background-color: #E8C2CA;
+    text-align: center;
+    padding: 2rem;
 }
