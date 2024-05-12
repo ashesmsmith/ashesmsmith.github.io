@@ -21,19 +21,14 @@ form {
     background-color: #735D78;
     color: white;
     text-align: center;
-    margin: 1rem;
     padding: 1rem;
-}
-
-label {
-    font-family: 'Cormorant';
-    font-size: 1.5rem;
-    letter-spacing: .5rem;
 }
 
 input {
     display: block;
+    width: 350px;
     margin: .15rem auto .75rem;
+    padding: 1rem;
     border: 1px solid #B392AC;
     border-radius: 5px;
 }
