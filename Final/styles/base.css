@@ -52,6 +52,17 @@ h1 {
     border-bottom: 1px solid #735D78;
 }
 
+section {
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+}
+
+img {
+    grid-row: 1/4;
+}
+
 /* FOOTER */
 footer {
     background-color: #E8C2CA;
