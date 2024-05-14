@@ -1,0 +1,7 @@
+@media (min-width: 700px) {
+    #search-results {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+    }
+}

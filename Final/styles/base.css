@@ -42,25 +42,36 @@ button {
 }
 
 #search-results {
-    padding: 3rem;
+    margin: 3rem;
 }
 
 h1 {
     color: #4D3452;
     font-family: 'Cormorant';
     font-size: 2rem;
+    margin: 3rem;
     border-bottom: 1px solid #735D78;
 }
 
 section {
-    margin: 1rem auto;
+    margin: 2rem auto;
+    padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    gap: 1rem;
+    gap: .5rem 2rem;
+    border: 1px solid #4D3452;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #4D3452;
 }
 
-img {
+section img {
     grid-row: 1/4;
+    box-shadow: 0 0 5px black;
+}
+
+h2, h3 {
+    font-family: 'Cormorant';
+    font-weight: bold;
 }
 
 /* FOOTER */
