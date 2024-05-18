@@ -58,9 +58,9 @@ form {
 input {
     background-color: white;
     display: block;
-    margin: .15rem auto .75rem;
+    margin: 1rem auto;
     padding: 1rem;
-    border: 1px solid #B392AC;
+    border: 2px solid #4D3452;
     border-radius: 5px;
 }
 
@@ -77,16 +77,16 @@ button {
 
 #search-btn {
     font-family: 'Satisfy';
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
 h1 {
     color: #4D3452;
     font-family: 'Satisfy';
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 3rem;
-    border-bottom: 1px solid #735D78;
+    border-bottom: 2px solid #735D78;
 }
 
 #search-results {

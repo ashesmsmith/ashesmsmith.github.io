@@ -37,6 +37,6 @@ function bookDetailsTemplate(book) {
         </div>
         <p class="book-desc">${book.volumeInfo.description}</p>
         <a class="preview-link" href="${book.volumeInfo.previewLink}"><button>Preview</button></a>
-        <button class="add-btn" type="submit">Add to My Bookshelf</button> 
+        <button class="add-btn" type="submit">Add to Bookshelf</button> 
     </section>`
 }

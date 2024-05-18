@@ -1,7 +1,8 @@
-@media (min-width: 700px) {
+@media (min-width: 850px) {
+    /* MAIN */
     #search-results {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
 
