@@ -1,5 +1,9 @@
 @media (min-width: 1000px ) {
     /* MAIN */
+    input {
+        width: 600px;
+    }
+
     #search-results {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
