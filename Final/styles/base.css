@@ -13,6 +13,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1;
+    align-items: center;
 }
 
 nav a {
@@ -27,6 +28,11 @@ nav a:hover {
     color: #4D3452;
     font-family: 'Satisfy';
     font-size: 1.5rem;
+}
+
+.current-page {
+    display: flex;
+    align-items: center;
 }
 
 /* HEADER */
