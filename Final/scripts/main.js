@@ -1,5 +1,6 @@
 import BookDetails from "./book-details.mjs";
 
+// HOMEPAGE SEARCH RESULTS CODE
 const baseURL = 'https://www.googleapis.com/books/v1/volumes?q=';
 const searchBar = document.querySelector('#search-param');
 const searchBtn = document.querySelector('#search-btn');

@@ -1,3 +1,9 @@
+import Bookshelf from "./bookshelf.mjs";
+
+// DEFAULT IMAGE TO USE WHEN MISSING FROM DATA
+// FIGURE OUT HOW TO USE THIS
+// const defaultImg = 'images/default.png';
+
 export default class BookDetails {
     constructor(baseURL, searchParam) {
         this.baseURL = baseURL;
@@ -17,18 +23,31 @@ export default class BookDetails {
         const results = document.getElementById('search-results');
 
         // display book card  under 'Top 10 Results' for each book returned by API
+        // STOPS WORKING WHEN A FIELD IS UNDEFINED OR NULL -- FIGURE OUT
+        // HOW TO SKIP OR USE DEFAULT DATA
         data.forEach((book) => {
-            results.insertAdjacentHTML('afterbegin', bookDetailsTemplate(book));
+                results.insertAdjacentHTML('afterbegin', bookDetailsTemplate(book));
+
+                // NOT WORKING -- RUNS BEFORE BEING CLICKED
+                // document.querySelector('.add-btn')
+                //     .addEventListener('click', this.addToShelf(book));
         });
     }
+
+    // NOT WORKING -- RUNS BEFORE BTN CLICKED IN showResults
+    // addToShelf(book) {
+    //     const bookshelf = new Bookshelf('My Bookshelf', book);
+    //     bookshelf.findShelf();
+    // }
 }
 
+// PROBLEM WHEN A VALUE IS UNDEFINED -- FIX THIS!!!
 function bookDetailsTemplate(book) {
     return `<section class="book-card">
         <a href="${book.volumeInfo.previewLink}">
             <img 
                 class="cover-img" 
-                src="${book.volumeInfo.imageLinks.thumbnail}" 
+                src="${book.volumeInfo.imageLinks.thumbnail}"
                 alt="${book.volumeInfo.title} cover image"
             >
         </a>
