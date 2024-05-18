@@ -6,33 +6,58 @@
 }
 
 /* NAVIGATION */
-nav {
+nav, #ham-btn {
     background-color: #4D3452;
-    display: flex;
-    flex-direction: column;
     position: sticky;
     top: 0;
     z-index: 1;
     align-items: center;
 }
 
+nav, .book-icon {
+    display: none;
+}
+
 nav a {
+    display: block;
+    background-color: #4D3452;
     color: white;
+    font-family: 'Satisfy';
+    font-size: 1.5rem;
     text-align: center;
     text-decoration: none;
-    padding: .5rem;
+    padding: 1rem;
 }
 
 nav a:hover {
     background-color: #E8C2CA;
     color: #4D3452;
-    font-family: 'Satisfy';
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+#ham-btn {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+}
+
+#ham-btn::before {
+    content: url('/final/images/open-book-icon.png');
+}
+
+#ham-btn.show::before {
+    content: url('/final/images/closed-book-icon.png');
+}
+
+.show {
+    display: block;
 }
 
 .current-page {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* HEADER */
@@ -106,6 +131,8 @@ h2, h3 {
     border: 1px solid #4D3452;
     border-radius: 10px;
     box-shadow: 0 0 15px #4D3452;
+    align-items: center;
+    justify-content: center;
 }
 
 .cover-img {
@@ -123,10 +150,12 @@ h2, h3 {
 
 .book-info {
     line-height: 2rem;
+    text-align: center;
 }
 
 .add-btn, .preview-link {
-    margin: 0 auto;
+    display: block;
+    margin: 1rem auto;
 }
 
 .add-btn {

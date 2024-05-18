@@ -6,9 +6,10 @@ export default class BookDetails {
 
     async init() {
         // get book data from API with user enter search parameter
-        const response = await fetch(`${this.baseURL}${this.searchBar}`);
+        const response = await fetch(`${this.baseURL}${this.searchParam}`);
         const data = await response.json();
 
+        console.log(data);
         this.showResults(data.items);
     }
 
@@ -32,12 +33,14 @@ function bookDetailsTemplate(book) {
             >
         </a>
         <div class="book-info">
-        <h2 class="book-title">${book.volumeInfo.title}</h2>
-        <h3 class="book-author">${book.volumeInfo.authors}</h3>
-        <h4 class="book-pages">${book.volumeInfo.pageCount} pages</h4>
+            <h2 class="book-title">${book.volumeInfo.title}</h2>
+            <h3 class="book-author">${book.volumeInfo.authors}</h3>
+            <h4 class="book-pages">${book.volumeInfo.pageCount} pages</h4>
         </div>
         <p class="book-desc">${book.volumeInfo.description}</p>
-        <a class="preview-link" href="${book.volumeInfo.previewLink}"><button>Preview</button></a>
-        <button class="add-btn" type="submit">Add to Bookshelf</button> 
+        <div class="results-btns">
+            <a class="preview-link" href="${book.volumeInfo.previewLink}"><button>Preview</button></a>
+            <button class="add-btn" type="submit">Add to Bookshelf</button> 
+        </div>
     </section>`
 }

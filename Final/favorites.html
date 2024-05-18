@@ -13,20 +13,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script type="module" defer src="scripts/main.js"></script>
+    <script src="scripts/ham-menu.js" defer></script>
 </head>
 
 <body>
+    <button id="ham-btn" type="button"></button>
     <nav>
         <a href="index.html">Home</a>
         <a href="bookshelf.html">My Bookshelf</a>
         <a class="current-page" href="#">
-            <img class="book-icon" src="images/book-icon.png" alt="book icon">
+            <img class="book-icon" src="images/open-book-icon.png" alt="book icon">
             Our Favorites
         </a>
     </nav>
     
     <header>
-        <img src="images/Bookshelf-logo.webp" alt="bookshelf logo" width=500 height="250">
+        <img src="images/bookshelf-logo.webp" alt="bookshelf logo" width=500 height="250">
     </header>
 
     <main>
@@ -38,7 +43,5 @@
         <p>BYU-Idaho | WDD 330 | ©2024</p>
         <a href="attributions.html">Attributions</a>
     </footer>
-
-    <script src="scripts/main.js"></script>
 </body>
 </html>
