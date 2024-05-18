@@ -9,7 +9,7 @@
 nav {
     background-color: #4D3452;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -43,7 +43,7 @@ header {
 header img {
     max-width: 95%;
     height: auto;
-    margin: .5rem;
+    object-fit: contain;
 }
 
 /* MAIN */

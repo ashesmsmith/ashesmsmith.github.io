@@ -1,26 +1,30 @@
-@media (min-width: 850px) {
+@media (min-width: 700px) {
+    /* NAVIGATION */
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
     /* MAIN */
     input {
         width: 400px;
     }
-    
-    #search-results {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-    }
 
     .book-card {
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: .5rem;
     }
 
-    .book-desc {
-        grid-column: 1/3;
+    .book-info {
+        grid-column: 2/4;
     }
     
-    .book-card button {
-        grid-column: 1/2;
+    .book-desc {
+        grid-column: 1/4;
+    }
+    
+    .preview-link, .add-btn {
+        grid-column: 3/4;
     }
 }
