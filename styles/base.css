@@ -6,7 +6,6 @@
 
 /* HEADER */
 header {
-    background-color: lightcyan;
     text-align: center;
     padding: 1rem;
 }
@@ -24,7 +23,6 @@ main {
 }
 
 section {
-    background-color: lightcyan;
     margin: 2rem;
     padding: 1rem;
     border: 2px solid #4A1942;
