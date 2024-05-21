@@ -1,9 +1,5 @@
 import Bookshelf from "./bookshelf.mjs";
 
-// DEFAULT IMAGE TO USE WHEN MISSING FROM DATA
-// FIGURE OUT HOW TO USE THIS
-// const defaultImg = 'images/default.png';
-
 export default class BookDetails {
     constructor(baseURL, searchParam) {
         this.baseURL = baseURL;
@@ -21,12 +17,10 @@ export default class BookDetails {
 
     showResults(data) {
         const results = document.getElementById('search-results');
+        results.innerHTML = ''; //reset results before adding new ones if new search is entered
 
-        // display book card  under 'Top 10 Results' for each book returned by API
-        // STOPS WORKING WHEN A FIELD IS UNDEFINED OR NULL -- FIGURE OUT
-        // HOW TO SKIP OR USE DEFAULT DATA
         data.forEach((book) => {
-                results.insertAdjacentHTML('afterbegin', bookDetailsTemplate(book));
+                results.insertAdjacentHTML('beforeend', bookDetailsTemplate(book));
 
                 // NOT WORKING -- RUNS BEFORE BEING CLICKED
                 // document.querySelector('.add-btn')
@@ -41,24 +35,45 @@ export default class BookDetails {
     // }
 }
 
-// PROBLEM WHEN A VALUE IS UNDEFINED -- FIX THIS!!!
 function bookDetailsTemplate(book) {
+    const previewLink = book.volumeInfo.previewLink ?? '';
+    let btnText = '';
+    if (previewLink === '') {
+        btnText = 'Preview Unavailable';
+    }
+    else {
+        btnText = 'Preview Book';
+    }
+
+    let coverImage = '';
+    if (book.volumeInfo.imageLinks) {
+        coverImage = book.volumeInfo.imageLinks.thumbnail;
+    }
+    else {
+        coverImage = 'images/default-image.png';
+    }
+    
+    const title = book.volumeInfo.title ?? 'No Title Available';
+    const author = book.volumeInfo.authors ?? 'Author Unavailable';
+    const pages = `${book.volumeInfo.pageCount} pages` ?? '';
+    const description = book.volumeInfo.description ?? 'No description available';
+
     return `<section class="book-card">
-        <a href="${book.volumeInfo.previewLink}">
+        <a href="${previewLink}">
             <img 
                 class="cover-img" 
-                src="${book.volumeInfo.imageLinks.thumbnail}"
-                alt="${book.volumeInfo.title} cover image"
+                src="${coverImage}"
+                alt="${title} cover image"
             >
         </a>
         <div class="book-info">
-            <h2 class="book-title">${book.volumeInfo.title}</h2>
-            <h3 class="book-author">${book.volumeInfo.authors}</h3>
-            <h4 class="book-pages">${book.volumeInfo.pageCount} pages</h4>
+            <h2 class="book-title">${title}</h2>
+            <h3 class="book-author">${author}</h3>
+            <h4 class="book-pages">${pages}</h4>
         </div>
-        <p class="book-desc">${book.volumeInfo.description}</p>
+        <p class="book-desc">${description}</p>
         <div class="results-btns">
-            <a class="preview-link" href="${book.volumeInfo.previewLink}"><button>Preview</button></a>
+            <a class="preview-link" href="${previewLink}"><button>${btnText}</button></a>
             <button class="add-btn" type="submit">Add to Bookshelf</button> 
         </div>
     </section>`
