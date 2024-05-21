@@ -1,0 +1,53 @@
+{
+    "Favorites": [
+        {
+            "isbn": "9798987402900",
+            "title": "Surviving DeRael",
+            "author": "Kjeri Rees",
+            "pages": "",
+            "description": "From rural Montana, Arica Tanson travels via magic to DeRael where she's aided by a pair of unconventional allies to not only surprise her new team but also win her first battle against the immortal king's guard, the Dovevians.",
+            "image": "http://books.google.com/books/content?id=mlqPzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+            "preview": "http://books.google.com/books?id=mlqPzwEACAAJ&dq=Surviving+DeRael&hl=&cd=1&source=gbs_api"
+        }
+        ,
+        {
+            "isbn": "",
+            "title": "",
+            "author": "",
+            "pages": "",
+            "description": "",
+            "image": "",
+            "preview": ""
+        }
+        ,
+        {
+            "isbn": "",
+            "title": "",
+            "author": "",
+            "pages": "",
+            "description": "",
+            "image": "",
+            "preview": ""
+        }
+        ,
+        {
+            "isbn": "",
+            "title": "",
+            "author": "",
+            "pages": "",
+            "description": "",
+            "image": "",
+            "preview": ""
+        }
+        ,
+        {
+            "isbn": "",
+            "title": "",
+            "author": "",
+            "pages": "",
+            "description": "",
+            "image": "",
+            "preview": ""
+        }
+    ]
+}

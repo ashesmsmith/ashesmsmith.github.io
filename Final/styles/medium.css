@@ -33,6 +33,7 @@
 
     .book-info {
         grid-column: 2/4;
+        text-align: left;
     }
     
     .book-desc {
