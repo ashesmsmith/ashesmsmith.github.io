@@ -1,5 +1,5 @@
 * {
-    font-family: 'Bad Script';
+    font-family: 'Montserrat';
     font-weight: normal;
     letter-spacing: .15rem;
     margin: 0;
@@ -8,8 +8,9 @@
 
 /* HEADER */
 header {
+    background-image: linear-gradient(#4A1942, white);
     background-color: #4A1942;
-    color: white;
+    color: #4A1942;
     text-align: center;
     padding: 1rem;
 }
@@ -30,6 +31,7 @@ section {
 h2 {
     background-color: #4A1942;
     color: white;
+    font-family: 'WindSong';
     font-size: 1.5rem;
     padding: 1rem;
     border-radius: 5px 0px 0px 0px;

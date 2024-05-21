@@ -43,11 +43,11 @@ nav a:hover {
 }
 
 #ham-btn::before {
-    content: url('/final/images/open-book-icon.png');
+    content: url('/Final/images/open-book.png');
 }
 
 #ham-btn.show::before {
-    content: url('/final/images/closed-book-icon.png');
+    content: url('/Final/images/closed-book.png');
 }
 
 .show {
