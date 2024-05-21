@@ -1,39 +1,57 @@
 * {
-    font-family: 'Montserrat';
+    font-family: 'Bad Script';
     font-weight: normal;
+    letter-spacing: .15rem;
     margin: 0;
+    padding: 0;
 }
 
 /* HEADER */
 header {
+    background-color: #4A1942;
+    color: white;
     text-align: center;
     padding: 1rem;
 }
 
 h1 {
-    color: #4A1942;
-    font-family: 'Josefin Slab';
-    font-size: 5rem;
+    font-family: 'WindSong';
+    font-size: 6rem;
     padding: 1rem;
 }
 
 /* MAIN */
-main {
-    margin: 3rem;
-}
-
 section {
     margin: 2rem;
-    padding: 1rem;
     border: 2px solid #4A1942;
     border-radius: 10px 0px;
 }
 
-h3 {
+h2 {
+    background-color: #4A1942;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px 0px 0px 0px;
+}
+
+a {
     color: #4A1942;
-    font-family: 'Josefin Slab';
-    font-size: 2rem;
+    text-decoration: none;
+}
+
+ul {
+    padding: 1rem;
+    list-style: none;
+}
+
+li {
+    padding: .5rem;
     border-bottom: 1px solid #4A1942;
+}
+
+p {
+    padding: 1rem;
 }
 
 /* FOOTER */
