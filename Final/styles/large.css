@@ -1,7 +1,7 @@
 @media (min-width: 1300px ) {
     /* MAIN */
     input {
-        width: 600px;
+        max-width: 1000px;
     }
 
     #search-results {

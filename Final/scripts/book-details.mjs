@@ -1,4 +1,3 @@
-import Bookshelf from "./bookshelf.mjs";
 
 export default class BookDetails {
     constructor(baseURL, searchParam) {
@@ -13,6 +12,9 @@ export default class BookDetails {
 
         console.log(data);
         this.showResults(data.items);
+
+        // document.querySelector('#add-to-shelf')
+        //     .addEventListener('click', this.addToShelf);
     }
 
     showResults(data) {
@@ -20,18 +22,12 @@ export default class BookDetails {
         results.innerHTML = ''; //reset results before adding new ones if new search is entered
 
         data.forEach((book) => {
-                results.insertAdjacentHTML('beforeend', bookDetailsTemplate(book));
-
-                // NOT WORKING -- RUNS BEFORE BEING CLICKED
-                // document.querySelector('.add-btn')
-                //     .addEventListener('click', this.addToShelf(book));
+                results.insertAdjacentHTML('beforeend', bookDetailsTemplate(book));            
         });
     }
 
-    // NOT WORKING -- RUNS BEFORE BTN CLICKED IN showResults
-    // addToShelf(book) {
-    //     const bookshelf = new Bookshelf('My Bookshelf', book);
-    //     bookshelf.findShelf();
+    // addToShelf() {
+    //     console.log('TEST')
     // }
 }
 
@@ -74,7 +70,7 @@ function bookDetailsTemplate(book) {
         <p class="book-desc">${description}</p>
         <div class="results-btns">
             <a class="preview-link" href="${previewLink}"><button>${btnText}</button></a>
-            <button class="add-btn" type="submit">Add to Bookshelf</button> 
+            <button id="add-to-shelf" data-id=${book.id}>Add to Bookshelf</button> 
         </div>
     </section>`
 }

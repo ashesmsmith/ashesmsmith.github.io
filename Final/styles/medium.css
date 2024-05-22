@@ -14,10 +14,6 @@
 @media (min-width: 1000px) {
 
     /* MAIN */
-    input {
-        width: 400px;
-    }
-
     #search-results {
         display: grid;
         grid-template-columns: 1fr 1fr;
