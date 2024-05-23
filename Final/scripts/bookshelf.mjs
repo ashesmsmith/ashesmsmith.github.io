@@ -1,17 +1,28 @@
+import { getLocalStorage, setLocalStorage } from './utils.mjs';
+
 export default class Bookshelf {
-    constructor(bookshelf, book){
-        this.bookshelf = bookshelf;
+    constructor(book){
         this.book = book;
     }
 
-    addToShelf() {
-        if (getLocalStorage(this.bookshelf)) {
-            // if bookshelf exist in localStorage add book to shelf
-            localStorage.setItem(this.bookshelf, JSON.stringify(this.book));
-        }
-        else {
-            // build the bookshelf in localStorage and add book to shelf
-            setLocalStorage(this.bookshelf, this.book);
-        }
+    displayShelf() {
+
     }
+}
+
+function bookshelfTemplate(book) {
+    return `<section class="book-card">
+        <a href="${previewLink}">
+            <img 
+                class="cover-img" 
+                src="${coverImage}"
+                alt="${title} cover image"
+            >
+        </a>
+        <div class="book-info">
+            <h2 class="book-title">${title}</h2>
+            <h3 class="book-author">${author}</h3>
+            <h4 class="book-pages">${pages}</h4>
+        </div>
+    </section>`
 }

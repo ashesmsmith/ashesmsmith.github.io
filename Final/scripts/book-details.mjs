@@ -1,4 +1,4 @@
-import Bookshelf from "./bookshelf.mjs";
+import { getLocalStorage, setLocalStorage } from './utils.mjs';
 
 export default class BookDetails {
     constructor(baseURL, searchParam) {
@@ -33,6 +33,15 @@ export default class BookDetails {
 
     addToShelf(event) {        
         console.log(event.target.getAttribute('data-id'));
+
+        // if (getLocalStorage(bookshelf)) {
+        //     // if bookshelf exist in localStorage add book to shelf
+        //     localStorage.setItem(bookshelf, JSON.stringify(book));
+        // }
+        // else {
+        //     // build the bookshelf in localStorage and add book to shelf
+        //     setLocalStorage(bookshelf, book);
+        // }
     }
 }
 

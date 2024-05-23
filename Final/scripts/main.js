@@ -1,4 +1,5 @@
-import BookDetails from "./book-details.mjs";
+import BookDetails from './book-details.mjs';
+import BookShelf from './bookshelf.mjs';
 
 // HOMEPAGE SEARCH RESULTS CODE > book-details.mjs
 const baseURL = 'https://www.googleapis.com/books/v1/volumes?q=';
