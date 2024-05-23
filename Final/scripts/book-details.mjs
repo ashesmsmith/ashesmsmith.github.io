@@ -32,7 +32,7 @@ export default class BookDetails {
     }
 
     addToShelf(event) {        
-        console.log(event.target.getAttribute('data-id'));
+        const bookISBN = event.target.getAttribute('data-id');
 
         // if (getLocalStorage(bookshelf)) {
         //     // if bookshelf exist in localStorage add book to shelf
@@ -42,6 +42,8 @@ export default class BookDetails {
         //     // build the bookshelf in localStorage and add book to shelf
         //     setLocalStorage(bookshelf, book);
         // }
+
+        console.log(bookISBN);
     }
 }
 
@@ -67,7 +69,11 @@ function bookDetailsTemplate(book) {
     const author = book.volumeInfo.authors ?? 'Author Unavailable';
     const pages = `${book.volumeInfo.pageCount} pages` ?? '';
     const description = book.volumeInfo.description ?? 'Description Unavailable';
-    const isbn = book.volumeInfo.industryIdentifiers[0].identifier ?? 'ISBN Unavailable';
+
+    // check for industryIdentifiers AND it's length to be more than 0
+    // if it is found then move on to the identifier. Otherwise assign unavailable
+    const isbn = book.volumeInfo.industryIdentifiers && book.volumeInfo.industryIdentifiers.length > 0
+        ? book.volumeInfo.industryIdentifiers[0].identifier: 'ISBN Unavailable';
 
     return `<section class="book-card">
         <a href="${previewLink}">
