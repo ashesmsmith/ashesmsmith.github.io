@@ -1,3 +1,4 @@
+import Bookshelf from "./bookshelf.mjs";
 
 export default class BookDetails {
     constructor(baseURL, searchParam) {
@@ -6,15 +7,19 @@ export default class BookDetails {
     }
 
     async init() {
-        // get book data from API with user enter search parameter
-        const response = await fetch(`${this.baseURL}${this.searchParam}`);
+        // get data from API with user entered search parameter
+        // only return books
+        const response = await fetch(`${this.baseURL}${this.searchParam}&printType=books`);
         const data = await response.json();
 
         console.log(data);
         this.showResults(data.items);
 
-        // document.querySelector('#add-to-shelf')
-        //     .addEventListener('click', this.addToShelf);
+        // add eventListener to all add-to-shelf buttons
+        const addBtns = document.querySelectorAll('#add-to-shelf');
+        addBtns.forEach((button) => {
+            button.addEventListener('click', this.addToShelf);
+        });
     }
 
     showResults(data) {
@@ -26,9 +31,9 @@ export default class BookDetails {
         });
     }
 
-    // addToShelf() {
-    //     console.log('TEST')
-    // }
+    addToShelf(event) {        
+        console.log(event.target.getAttribute('data-id'));
+    }
 }
 
 function bookDetailsTemplate(book) {
@@ -49,10 +54,11 @@ function bookDetailsTemplate(book) {
         coverImage = 'images/default-image.png';
     }
     
-    const title = book.volumeInfo.title ?? 'No Title Available';
+    const title = book.volumeInfo.title ?? 'Title Unavailable';
     const author = book.volumeInfo.authors ?? 'Author Unavailable';
     const pages = `${book.volumeInfo.pageCount} pages` ?? '';
-    const description = book.volumeInfo.description ?? 'No description available';
+    const description = book.volumeInfo.description ?? 'Description Unavailable';
+    const isbn = book.volumeInfo.industryIdentifiers[0].identifier ?? 'ISBN Unavailable';
 
     return `<section class="book-card">
         <a href="${previewLink}">
@@ -70,7 +76,7 @@ function bookDetailsTemplate(book) {
         <p class="book-desc">${description}</p>
         <div class="results-btns">
             <a class="preview-link" href="${previewLink}"><button>${btnText}</button></a>
-            <button id="add-to-shelf" data-id=${book.id}>Add to Bookshelf</button> 
+            <button id="add-to-shelf" data-id=${isbn}>Add to Bookshelf</button>
         </div>
     </section>`
 }
