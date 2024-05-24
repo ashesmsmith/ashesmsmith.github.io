@@ -1,8 +1,8 @@
 import { getLocalStorage, setLocalStorage } from './utils.mjs';
 
 export default class Bookshelf {
-    constructor(book){
-        this.book = book;
+    constructor() {
+        
     }
 
     displayShelf() {

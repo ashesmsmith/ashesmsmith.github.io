@@ -1,4 +1,4 @@
-import { getLocalStorage, setLocalStorage } from './utils.mjs';
+import { getLocalStorage, setLocalStorage } from "./utils.mjs";
 
 export default class BookDetails {
     constructor(baseURL, searchParam) {
@@ -12,7 +12,6 @@ export default class BookDetails {
         const response = await fetch(`${this.baseURL}${this.searchParam}&printType=books`);
         const data = await response.json();
 
-        console.log(data);
         this.showResults(data.items);
 
         // add eventListener to all add-to-shelf buttons
@@ -31,23 +30,26 @@ export default class BookDetails {
         });
     }
 
-    addToShelf(event) {        
-        const bookISBN = event.target.getAttribute('data-id');
+    addToShelf(event) {    
+        const bookId = event.target.getAttribute('data-id');
+        const bookCard = event.target.parentElement.parentElement; // section element for the book card
+        const bookHTML = bookCard.outerHTML;
+        const data = `{${bookId}: ${bookHTML}}`;
 
-        // if (getLocalStorage(bookshelf)) {
-        //     // if bookshelf exist in localStorage add book to shelf
-        //     localStorage.setItem(bookshelf, JSON.stringify(book));
-        // }
-        // else {
-        //     // build the bookshelf in localStorage and add book to shelf
-        //     setLocalStorage(bookshelf, book);
-        // }
-
-        console.log(bookISBN);
+        if (getLocalStorage('Bookshelf')) {
+            // if bookshelf exist in localStorage add book to shelf
+            localStorage.setItem('Bookshelf', data);
+        }
+        else {
+            // build the bookshelf in localStorage and add book to shelf
+            setLocalStorage('Bookshelf', data);
+        }
     }
 }
 
 function bookDetailsTemplate(book) {
+    const id = book.id;
+
     const previewLink = book.volumeInfo.previewLink ?? '';
     let btnText = '';
     if (previewLink === '') {
@@ -73,7 +75,7 @@ function bookDetailsTemplate(book) {
     // check for industryIdentifiers AND it's length to be more than 0
     // if it is found then move on to the identifier. Otherwise assign unavailable
     const isbn = book.volumeInfo.industryIdentifiers && book.volumeInfo.industryIdentifiers.length > 0
-        ? book.volumeInfo.industryIdentifiers[0].identifier: 'ISBN Unavailable';
+        ? book.volumeInfo.industryIdentifiers[0].identifier: 'Unavailable';
 
     return `<section class="book-card">
         <a href="${previewLink}">
@@ -87,11 +89,12 @@ function bookDetailsTemplate(book) {
             <h2 class="book-title">${title}</h2>
             <h3 class="book-author">${author}</h3>
             <h4 class="book-pages">${pages}</h4>
+            <p class="isbn">ISBN: ${isbn}</p>
         </div>
         <p class="book-desc">${description}</p>
         <div class="results-btns">
             <a class="preview-link" href="${previewLink}"><button>${btnText}</button></a>
-            <button id="add-to-shelf" data-id=${isbn}>Add to Bookshelf</button>
+            <button id="add-to-shelf" data-id=${id}>Add to Bookshelf</button>
         </div>
     </section>`
 }
