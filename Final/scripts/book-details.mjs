@@ -31,19 +31,27 @@ export default class BookDetails {
     }
 
     addToShelf(event) {    
+        // Find or create bookshelf in localStorage
+        let shelf = getLocalStorage('bookshelf');
+        if (!shelf) {
+            setLocalStorage('bookshelf', []);
+        }  
+    
         const bookId = event.target.getAttribute('data-id');
-        const bookCard = event.target.parentElement.parentElement; // section element for the book card
-        const bookHTML = bookCard.outerHTML;
+        const bookCard = event.target.parentElement.parentElement; 
+        const bookHTML = bookCard.outerHTML; // section HTML for the book card
         const data = `{${bookId}: ${bookHTML}}`;
 
-        if (getLocalStorage('Bookshelf')) {
-            // if bookshelf exist in localStorage add book to shelf
-            localStorage.setItem('Bookshelf', data);
-        }
-        else {
-            // build the bookshelf in localStorage and add book to shelf
-            setLocalStorage('Bookshelf', data);
-        }
+        shelf.push(data);
+        setLocalStorage('bookshelf', shelf);
+        // if (bookId) {
+        //     // if bookshelf exist in localStorage add book to shelf
+        //     bookshelf.push(data);
+        // }
+        // else {
+        //     // build the bookshelf in localStorage and add book to shelf
+        //     setLocalStorage('Bookshelf', data);
+        // }
     }
 }
 
