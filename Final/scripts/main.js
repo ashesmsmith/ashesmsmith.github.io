@@ -22,7 +22,7 @@ function search(event) {
 }
 
 // BOOKSHELF PAGE
-let bookshelf = new BookShelf();
+let bookshelf = new BookShelf('bookshelf');
 const bookshelfPage = document.querySelector('#bookshelf-page');
 
-bookshelfPage.addEventListener('onload', bookshelf.displayBooks());
+bookshelfPage.addEventListener('onload', bookshelf.init());

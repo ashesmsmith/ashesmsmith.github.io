@@ -16,6 +16,15 @@
         gap: 1rem;
         justify-content: center;
     }
+
+    .shelf-card {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .dlt-btn {
+        align-items: baseline;
+    }
 }
 
 @media (min-width: 1000px) {
