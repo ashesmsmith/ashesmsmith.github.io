@@ -4,6 +4,7 @@ export default class BookDetails {
     constructor(baseURL, searchParam) {
         this.baseURL = baseURL;
         this.searchParam = searchParam;
+        this.books = '';
     }
 
     async init() {
@@ -12,12 +13,14 @@ export default class BookDetails {
         const response = await fetch(`${this.baseURL}${this.searchParam}&printType=books`);
         const data = await response.json();
 
-        this.showResults(data.items);
+        this.books = data.items;
+        this.showResults(this.books);
 
         // add eventListener to all add-to-shelf buttons
         const addBtns = document.querySelectorAll('#add-to-shelf');
         addBtns.forEach((button) => {
-            button.addEventListener('click', this.addToShelf);
+            let btnId = button.getAttribute('data-id'); // get id from btn clicked
+            button.addEventListener('click', () => this.addToShelf(this.books, btnId));
         });
     }
 
@@ -26,24 +29,24 @@ export default class BookDetails {
         results.innerHTML = ''; //reset results before adding new ones if new search is entered
 
         data.forEach((book) => {
-                results.insertAdjacentHTML('beforeend', bookDetailsTemplate(book));            
+            results.insertAdjacentHTML('beforeend', bookDetailsTemplate(book));
         });
     }
 
-    addToShelf(event) {    
+    addToShelf(books, id) {    
         // Find or create bookshelf in localStorage
-        let shelf = getLocalStorage('bookshelf');
-        if (!shelf) {
+        if (!getLocalStorage('bookshelf')) {
             setLocalStorage('bookshelf', []);
-        }  
-    
-        const bookId = event.target.getAttribute('data-id');
-        const bookCard = event.target.parentElement.parentElement; 
-        const bookHTML = bookCard.outerHTML; // section HTML for the book card
-        const data = `{${bookId}: ${bookHTML}}`;
+        } 
 
-        shelf.push(data);
-        setLocalStorage('bookshelf', shelf);
+        let shelf = getLocalStorage('bookshelf');
+        
+        books.forEach((book) => {
+            if (book.id === id) {
+                shelf.push(book);
+                setLocalStorage('bookshelf', shelf);
+            }
+        })
     }
 }
 

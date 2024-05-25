@@ -22,9 +22,8 @@ function search(event) {
 }
 
 
-// BOOKSHELF PAGE
-let shelf = new BookShelf;
-const bookshelfPage = document.querySelector('#bookshelf-page');
+// // BOOKSHELF PAGE
+// let shelf = new BookShelf();
+// const bookshelfPage = document.querySelector('#bookshelf-page');
 
-// NOT WORKING
-// bookshelfPage.addEventListener('onload', 'testing');
+// bookshelfPage.addEventListener('onload', shelf.getBookData());

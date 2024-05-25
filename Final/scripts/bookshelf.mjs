@@ -7,7 +7,11 @@ export default class Bookshelf {
 
     getBookData() {
         let shelf = getLocalStorage('bookshelf');
-        console.log('shelf');
+        shelf.forEach((book) => {
+            let bookId = book.id;
+            let bookHTML = book.html;
+            console.log(book.id);
+        });
     }
 }
 
