@@ -90,10 +90,10 @@ function bookDetailsTemplate(book) {
             >
         </a>
         <div class="book-info">
-            <h2 class="book-title">${title}</h2>
-            <h3 class="book-author">${author}</h3>
-            <h4 class="book-pages">${pages}</h4>
-            <p class="isbn">ISBN: ${isbn}</p>
+            <h2>${title}</h2>
+            <h3>${author}</h3>
+            <h4>${pages}</h4>
+            <p>ISBN: ${isbn}</p>
         </div>
         <p class="book-desc">${description}</p>
         <div class="results-btns">

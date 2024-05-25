@@ -5,18 +5,30 @@ export default class Bookshelf {
         
     }
 
-    getBookData() {
-        let shelf = getLocalStorage('bookshelf');
-        shelf.forEach((book) => {
-            let bookId = book.id;
-            let bookHTML = book.html;
-            console.log(book.id);
+    displayBooks() {
+        let bookData = getLocalStorage('bookshelf');
+        const shelf = document.querySelector('#bookshelf');
+
+        bookData.forEach((book) => {
+            shelf.insertAdjacentHTML('beforeend', bookshelfTemplate(book));
         });
     }
 }
 
 function bookshelfTemplate(book) {
-    return `<section class="book-card">
+    let coverImage = '';
+    if (book.volumeInfo.imageLinks) {
+        coverImage = book.volumeInfo.imageLinks.thumbnail;
+    }
+    else {
+        coverImage = 'images/default-image.png';
+    }
+    
+    const previewLink = book.volumeInfo.previewLink ?? '';
+    const title = book.volumeInfo.title ?? 'Title Unavailable';
+    const author = book.volumeInfo.authors ?? 'Author Unavailable';
+
+    return `<section class="shelf-card">
         <a href="${previewLink}">
             <img 
                 class="cover-img" 
@@ -24,10 +36,9 @@ function bookshelfTemplate(book) {
                 alt="${title} cover image"
             >
         </a>
-        <div class="book-info">
-            <h2 class="book-title">${title}</h2>
-            <h3 class="book-author">${author}</h3>
-            <h4 class="book-pages">${pages}</h4>
+        <div class="shelf-info">
+            <h2>${title}</h2>
+            <h3>${author}</h3>
         </div>
     </section>`
 }

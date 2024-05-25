@@ -9,6 +9,13 @@
     #ham-btn {
         display: none;
     }
+
+    #bookshelf {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 1000px) {
@@ -19,6 +26,12 @@
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
         justify-content: center;
+    }
+
+    #bookshelf {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
     }
 
     .book-card {

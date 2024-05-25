@@ -21,9 +21,8 @@ function search(event) {
     book.init();
 }
 
+// BOOKSHELF PAGE
+let bookshelf = new BookShelf();
+const bookshelfPage = document.querySelector('#bookshelf-page');
 
-// // BOOKSHELF PAGE
-// let shelf = new BookShelf();
-// const bookshelfPage = document.querySelector('#bookshelf-page');
-
-// bookshelfPage.addEventListener('onload', shelf.getBookData());
+bookshelfPage.addEventListener('onload', bookshelf.displayBooks());
