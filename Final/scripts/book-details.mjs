@@ -44,14 +44,6 @@ export default class BookDetails {
 
         shelf.push(data);
         setLocalStorage('bookshelf', shelf);
-        // if (bookId) {
-        //     // if bookshelf exist in localStorage add book to shelf
-        //     bookshelf.push(data);
-        // }
-        // else {
-        //     // build the bookshelf in localStorage and add book to shelf
-        //     setLocalStorage('Bookshelf', data);
-        // }
     }
 }
 
@@ -81,7 +73,8 @@ function bookDetailsTemplate(book) {
     const description = book.volumeInfo.description ?? 'Description Unavailable';
 
     // check for industryIdentifiers AND it's length to be more than 0
-    // if it is found then move on to the identifier. Otherwise assign unavailable
+    // if it is found then move on to the identifier. 
+    // Otherwise assign 'unavailable'
     const isbn = book.volumeInfo.industryIdentifiers && book.volumeInfo.industryIdentifiers.length > 0
         ? book.volumeInfo.industryIdentifiers[0].identifier: 'Unavailable';
 

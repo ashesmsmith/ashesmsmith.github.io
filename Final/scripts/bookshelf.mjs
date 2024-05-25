@@ -5,8 +5,9 @@ export default class Bookshelf {
         
     }
 
-    displayShelf() {
-
+    getBookData() {
+        let shelf = getLocalStorage('bookshelf');
+        console.log('shelf');
     }
 }
 

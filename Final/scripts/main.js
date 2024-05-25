@@ -1,7 +1,7 @@
 import BookDetails from './book-details.mjs';
 import BookShelf from './bookshelf.mjs';
 
-// HOMEPAGE SEARCH RESULTS CODE > book-details.mjs
+// HOMEPAGE
 const homepage = document.querySelector('#homepage');
 const baseURL = 'https://www.googleapis.com/books/v1/volumes?q=';
 const searchBar = document.querySelector('#search-param');
@@ -20,3 +20,11 @@ function search(event) {
     const book = new BookDetails(baseURL, searchBar.value);
     book.init();
 }
+
+
+// BOOKSHELF PAGE
+let shelf = new BookShelf;
+const bookshelfPage = document.querySelector('#bookshelf-page');
+
+// NOT WORKING
+// bookshelfPage.addEventListener('onload', 'testing');
