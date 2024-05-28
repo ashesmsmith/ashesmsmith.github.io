@@ -8,7 +8,6 @@ const searchBar = document.querySelector('#search-param');
 
 if (homepage) {
     const searchBtn = document.querySelector('#search-btn');
-
     searchBtn.addEventListener('click', search);
 }
 
@@ -22,7 +21,11 @@ function search(event) {
 }
 
 // BOOKSHELF PAGE
-let bookshelf = new BookShelf('bookshelf');
-const bookshelfPage = document.querySelector('#bookshelf-page');
+const shelfPage = document.querySelector('#bookshelf-page');
 
-bookshelfPage.addEventListener('onload', bookshelf.init());
+if (shelfPage) {
+    let bookshelf = new BookShelf('bookshelf');
+    const bookshelfPage = document.querySelector('#bookshelf-page');
+    
+    bookshelfPage.addEventListener('onload', bookshelf.init());
+}

@@ -15,6 +15,7 @@ export default class BookDetails {
 
         this.books = data.items;
         this.showResults(this.books);
+        console.log(this.books);
 
         // add eventListener to all add-to-shelf buttons
         const addBtns = document.querySelectorAll('#add-to-shelf');
