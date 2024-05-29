@@ -124,6 +124,10 @@ h1 {
     margin: 3rem;
 }
 
+#attributions-page ul {
+    margin: 1rem 4rem;
+}
+
 h2, h3 {
     font-weight: bold;
 }
@@ -143,7 +147,7 @@ h2, h3 {
 
 .cover-img {
     display: block;
-    margin: 1rem auto;
+    margin: 2rem auto;
     box-shadow: 0 0 5px black;
     object-fit: contain;
 }
@@ -163,6 +167,10 @@ h2, h3 {
     text-align: center;
 }
 
+.buttons {
+    margin: auto auto 0 auto;
+}
+
 #add-to-shelf, .preview-link {
     display: block;
     margin: 1rem auto;
@@ -173,9 +181,17 @@ h2, h3 {
     color: #E8C2CA;
 }
 
+.spin {
+
+}
+
 /* FOOTER */
 footer {
     background-color: #E8C2CA;
     text-align: center;
     padding: 2rem;
+}
+
+@keyframes buttonSpin {
+    /* DO THIS NEXT */
 }

@@ -61,6 +61,8 @@ function bookshelfTemplate(book) {
             <h2>${title}</h2>
             <h3>${author}</h3>
         </div>
-        <button id="dlt-btn" data-id=${id}>Remove from Shelf</button>
+        <div class="buttons">
+            <button id="dlt-btn" data-id=${id}>Remove from Shelf</button>
+        </div>
     </section>`
 }

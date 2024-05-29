@@ -20,7 +20,7 @@ export default class BookDetails {
         const addBtns = document.querySelectorAll('#add-to-shelf');
         addBtns.forEach((button) => {
             let btnId = button.getAttribute('data-id'); // get id from btn clicked
-            button.addEventListener('click', () => this.addToShelf(this.books, btnId));
+            button.addEventListener('click', () => this.addToShelf(this.books, btnId, button));
         });
     }
 
@@ -33,7 +33,7 @@ export default class BookDetails {
         });
     }
 
-    addToShelf(books, id) {    
+    addToShelf(books, id, button) {    
         // Find or create bookshelf in localStorage
         if (!getLocalStorage('bookshelf')) {
             setLocalStorage('bookshelf', []);
@@ -60,6 +60,8 @@ export default class BookDetails {
                 if (book.id === id){
                     shelf.push(book);
                     setLocalStorage('bookshelf', shelf); 
+                    button.classList.toggle('spin');
+                    console.log(button);
                 }
             }) 
         }
@@ -112,7 +114,7 @@ function bookDetailsTemplate(book) {
             <p>ISBN: ${isbn}</p>
         </div>
         <p class="book-desc">${description}</p>
-        <div class="results-btns">
+        <div class="results-btns buttons">
             <a class="preview-link" href="${previewLink}"><button>${btnText}</button></a>
             <button id="add-to-shelf" data-id=${id}>Add to Bookshelf</button>
         </div>

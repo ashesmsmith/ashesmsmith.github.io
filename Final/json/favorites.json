@@ -1,33 +1,265 @@
-{
-    "items": [
-        {
-            "googleID": "mlqPzwEACAAJ",
+[
+    {
+        "kind": "books#volume",
+        "id": "mlqPzwEACAAJ",
+        "etag": "QAPgIC8K0ME",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/mlqPzwEACAAJ",
+        "volumeInfo": {
             "title": "Surviving DeRael",
-            "author": "Kjeri Rees",
-            "pages": "448",
+            "authors": [
+                "Kjeri Rees"
+            ],
+            "publisher": "Harbinger of Victory",
+            "publishedDate": "2023-01-20",
             "description": "From rural Montana, Arica Tanson travels via magic to DeRael where she's aided by a pair of unconventional allies to not only surprise her new team but also win her first battle against the immortal king's guard, the Dovevians.",
-            "image": "http://books.google.com/books/content?id=mlqPzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-            "preview": "http://books.google.com/books?id=mlqPzwEACAAJ&dq=Surviving+DeRael&hl=&cd=1&source=gbs_api"
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9798987402900"
+                }
+            ],
+            "readingModes": {
+                "text": false,
+                "image": false
+            },
+            "pageCount": 0,
+            "printType": "BOOK",
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": false,
+            "contentVersion": "preview-1.0.0",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=mlqPzwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=mlqPzwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=mlqPzwEACAAJ&dq=Surviving+DeRael&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+            "infoLink": "http://books.google.com/books?id=mlqPzwEACAAJ&dq=Surviving+DeRael&hl=&as_pt=BOOKS&source=gbs_api",
+            "canonicalVolumeLink": "https://books.google.com/books/about/Surviving_DeRael.html?hl=&id=mlqPzwEACAAJ"
+        },
+        "saleInfo": {
+            "country": "US",
+            "saleability": "NOT_FOR_SALE",
+            "isEbook": false
+        },
+        "accessInfo": {
+            "country": "US",
+            "viewability": "NO_PAGES",
+            "embeddable": false,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": false
+            },
+            "pdf": {
+                "isAvailable": false
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=mlqPzwEACAAJ&hl=&as_pt=BOOKS&source=gbs_api",
+            "accessViewStatus": "NONE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "From rural Montana, Arica Tanson travels via magic to DeRael where she&#39;s aided by a pair of unconventional allies to not only surprise her new team but also win her first battle against the immortal king&#39;s guard, the Dovevians."
         }
-        ,
-        {
-            "googleID": "E-OLEAAAQBAJ",
+    },
+    {
+        "kind": "books#volume",
+        "id": "E-OLEAAAQBAJ",
+        "etag": "08Ko+tpClGw",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/E-OLEAAAQBAJ",
+        "volumeInfo": {
             "title": "Fourth Wing",
-            "author": "Rebecca Yarros",
-            "pages": "631",
-            "description": "Twenty-year-old Violet Sorrengail was supposed to enter the Scribe Quadrant, living a quiet life among books and history. Now, the commanding general—also known as her tough-as-talons mother—has ordered Violet to join the hundreds of candidates striving to become the elite of Navarre: dragon riders. But when you're smaller than everyone else and your body is brittle, death is only a heartbeat away...because dragons don't bond to “fragile” humans. They incinerate them. With fewer dragons willing to bond than cadets, most would kill Violet to better their own chances of success. The rest would kill her just for being her mother's daughter—like Xaden Riorson, the most powerful and ruthless wingleader in the Riders Quadrant. She'll need every edge her wits can give her just to see the next sunrise. Yet, with every day that passes, the war outside grows more deadly, the kingdom's protective wards are failing, and the death toll continues to rise. Even worse, Violet begins to suspect leadership is hiding a terrible secret. Friends, enemies, lovers. Everyone at Basgiath War College has an agenda—because once you enter, there are only two ways out: graduate or die. The Empyrean series is best enjoyed in order.",
-            "image": "http://books.google.com/books/content?id=E-OLEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-            "preview": "http://books.google.com/books?id=E-OLEAAAQBAJ&printsec=frontcover&dq=Fourth+Wing&hl=&as_pt=BOOKS&cd=1&source=gbs_api"
+            "authors": [
+                "Rebecca Yarros"
+            ],
+            "publisher": "Entangled: Red Tower Books",
+            "publishedDate": "2023-05-02",
+            "description": "A #1 New York Times bestseller • Optioned for TV by Amazon Studios • Amazon Best Books of the Year, #4 • Apple Best Books of the Year 2023 • Barnes & Noble Best Fantasy Book of 2023 • NPR “Books We Love” 2023 • Audible Best Books of 2023 • Hudson Book of the Year • Google Play Best Books of 2023 • Indigo Best Books of 2023 • Waterstones Book of the Year finalist • Goodreads Choice Award, semi-finalist • Newsweek Staffers’ Favorite Books of 2023 • Paste Magazine's Best Books of 2023 \"Suspenseful, sexy, and with incredibly entertaining storytelling, the first in Yarros' Empyrean series will delight fans of romantic, adventure-filled fantasy.\" —Booklist, starred review \"Fourth Wing will have your heart pounding from beginning to end... A fantasy like you've never read before.\" ―#1 New York Times bestselling author Jennifer L. Armentrout Enter the brutal and elite world of a war college for dragon riders from New York Times bestselling author Rebecca Yarros Twenty-year-old Violet Sorrengail was supposed to enter the Scribe Quadrant, living a quiet life among books and history. Now, the commanding general—also known as her tough-as-talons mother—has ordered Violet to join the hundreds of candidates striving to become the elite of Navarre: dragon riders. But when you’re smaller than everyone else and your body is brittle, death is only a heartbeat away...because dragons don’t bond to “fragile” humans. They incinerate them. With fewer dragons willing to bond than cadets, most would kill Violet to better their own chances of success. The rest would kill her just for being her mother’s daughter—like Xaden Riorson, the most powerful and ruthless wingleader in the Riders Quadrant. She’ll need every edge her wits can give her just to see the next sunrise. Yet, with every day that passes, the war outside grows more deadly, the kingdom's protective wards are failing, and the death toll continues to rise. Even worse, Violet begins to suspect leadership is hiding a terrible secret. Friends, enemies, lovers. Everyone at Basgiath War College has an agenda—because once you enter, there are only two ways out: graduate or die. The Empyrean series is best enjoyed in order. Reading Order: Book #1 Fourth Wing Book #2 Iron Flame",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9781649374080"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "1649374089"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": false
+            },
+            "pageCount": 631,
+            "printType": "BOOK",
+            "categories": [
+                "Fiction"
+            ],
+            "averageRating": 5,
+            "ratingsCount": 2,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "2.23.22.0.preview.2",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=E-OLEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=E-OLEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=E-OLEAAAQBAJ&printsec=frontcover&dq=Fourth+Wing&hl=&as_pt=BOOKS&cd=1&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=E-OLEAAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=E-OLEAAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 14.99,
+                "currencyCode": "USD"
+            },
+            "retailPrice": {
+                "amount": 14.99,
+                "currencyCode": "USD"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=E-OLEAAAQBAJ&rdid=book-E-OLEAAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 14990000,
+                        "currencyCode": "USD"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 14990000,
+                        "currencyCode": "USD"
+                    },
+                    "giftable": true
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true,
+                "acsTokenLink": "http://books.google.com/books/download/Fourth_Wing-sample-epub.acsm?id=E-OLEAAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+            },
+            "pdf": {
+                "isAvailable": false
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=E-OLEAAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "Everyone at Basgiath War College has an agenda—because once you enter, there are only two ways out: graduate or die. The Empyrean series is best enjoyed in order. Reading Order: Book #1 Fourth Wing Book #2 Iron Flame"
         }
-        ,
-        {
-            "googleID": "vH3LDwAAQBAJ",
+    },
+    {
+        "kind": "books#volume",
+        "id": "vH3LDwAAQBAJ",
+        "etag": "hQ7heXwtkGs",
+        "selfLink": "https://www.googleapis.com/books/v1/volumes/vH3LDwAAQBAJ",
+        "volumeInfo": {
             "title": "The Invisible Life of Addie LaRue",
-            "author": "V. E. Schwab",
-            "pages": "484",
-            "description": "A Life No One Will Remember. A Story You Will Never Forget. France, 1714: in a moment of desperation, a young woman makes a Faustian bargain to live forever—and is cursed to be forgotten by everyone she meets. Thus begins the extraordinary life of Addie LaRue, and a dazzling adventure that will play out across centuries and continents, across history and art, as a young woman learns how far she will go to leave her mark on the world. But everything changes when, after nearly 300 years, Addie stumbles across a young man in a hidden bookstore and he remembers her name.",
-            "image": "http://books.google.com/books/content?id=vH3LDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-            "preview": "http://books.google.com/books?id=vH3LDwAAQBAJ&printsec=frontcover&dq=Addie&hl=&as_pt=BOOKS&cd=2&source=gbs_api"
+            "authors": [
+                "V. E. Schwab"
+            ],
+            "publisher": "Tor Books",
+            "publishedDate": "2020-10-06",
+            "description": "NEW YORK TIMES BESTSELLER USA TODAY BESTSELLER NATIONAL INDIE BESTSELLER THE WASHINGTON POST BESTSELLER Recommended by Entertainment Weekly, Real Simple, NPR, Slate, and Oprah Magazine #1 Library Reads Pick—October 2020 #1 Indie Next Pick—October 2020 BOOK OF THE YEAR (2020) FINALIST—Book of The Month Club A “Best Of” Book From: Oprah Mag * CNN * Amazon * Amazon Editors * NPR * Goodreads * Bustle * PopSugar * BuzzFeed * Barnes & Noble * Kirkus Reviews * Lambda Literary * Nerdette * The Nerd Daily * Polygon * Library Reads * io9 * Smart Bitches Trashy Books * LiteraryHub * Medium * BookBub * The Mary Sue * Chicago Tribune * NY Daily News * SyFy Wire * Powells.com * Bookish * Book Riot * Library Reads Voter Favorite * In the vein of The Time Traveler’s Wife and Life After Life, The Invisible Life of Addie LaRue is New York Times bestselling author V. E. Schwab’s genre-defying tour de force. A Life No One Will Remember. A Story You Will Never Forget. France, 1714: in a moment of desperation, a young woman makes a Faustian bargain to live forever—and is cursed to be forgotten by everyone she meets. Thus begins the extraordinary life of Addie LaRue, and a dazzling adventure that will play out across centuries and continents, across history and art, as a young woman learns how far she will go to leave her mark on the world. But everything changes when, after nearly 300 years, Addie stumbles across a young man in a hidden bookstore and he remembers her name. Also by V. E. Schwab Shades of Magic A Darker Shade of Magic A Gathering of Shadows A Conjuring of Light Villains Vicious Vengeful At the Publisher's request, this title is being sold without Digital Rights Management Software (DRM) applied.",
+            "industryIdentifiers": [
+                {
+                    "type": "ISBN_13",
+                    "identifier": "9780765387585"
+                },
+                {
+                    "type": "ISBN_10",
+                    "identifier": "0765387581"
+                }
+            ],
+            "readingModes": {
+                "text": true,
+                "image": false
+            },
+            "pageCount": 484,
+            "printType": "BOOK",
+            "categories": [
+                "Fiction"
+            ],
+            "averageRating": 5,
+            "ratingsCount": 4,
+            "maturityRating": "NOT_MATURE",
+            "allowAnonLogging": true,
+            "contentVersion": "2.11.12.0.preview.2",
+            "panelizationSummary": {
+                "containsEpubBubbles": false,
+                "containsImageBubbles": false
+            },
+            "imageLinks": {
+                "smallThumbnail": "http://books.google.com/books/content?id=vH3LDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                "thumbnail": "http://books.google.com/books/content?id=vH3LDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+            },
+            "language": "en",
+            "previewLink": "http://books.google.com/books?id=vH3LDwAAQBAJ&printsec=frontcover&dq=Addie&hl=&as_pt=BOOKS&cd=2&source=gbs_api",
+            "infoLink": "https://play.google.com/store/books/details?id=vH3LDwAAQBAJ&source=gbs_api",
+            "canonicalVolumeLink": "https://play.google.com/store/books/details?id=vH3LDwAAQBAJ"
+        },
+        "saleInfo": {
+            "country": "US",
+            "saleability": "FOR_SALE",
+            "isEbook": true,
+            "listPrice": {
+                "amount": 12.99,
+                "currencyCode": "USD"
+            },
+            "retailPrice": {
+                "amount": 12.99,
+                "currencyCode": "USD"
+            },
+            "buyLink": "https://play.google.com/store/books/details?id=vH3LDwAAQBAJ&rdid=book-vH3LDwAAQBAJ&rdot=1&source=gbs_api",
+            "offers": [
+                {
+                    "finskyOfferType": 1,
+                    "listPrice": {
+                        "amountInMicros": 12990000,
+                        "currencyCode": "USD"
+                    },
+                    "retailPrice": {
+                        "amountInMicros": 12990000,
+                        "currencyCode": "USD"
+                    },
+                    "giftable": true
+                }
+            ]
+        },
+        "accessInfo": {
+            "country": "US",
+            "viewability": "PARTIAL",
+            "embeddable": true,
+            "publicDomain": false,
+            "textToSpeechPermission": "ALLOWED",
+            "epub": {
+                "isAvailable": true
+            },
+            "pdf": {
+                "isAvailable": false
+            },
+            "webReaderLink": "http://play.google.com/books/reader?id=vH3LDwAAQBAJ&hl=&as_pt=BOOKS&source=gbs_api",
+            "accessViewStatus": "SAMPLE",
+            "quoteSharingAllowed": false
+        },
+        "searchInfo": {
+            "textSnippet": "Also by V. E. Schwab Shades of Magic A Darker Shade of Magic A Gathering of Shadows A Conjuring of Light Villains Vicious Vengeful At the Publisher&#39;s request, this title is being sold without Digital Rights Management Software (DRM) applied ..."
         }
-    ]
-}
+    }
+]
