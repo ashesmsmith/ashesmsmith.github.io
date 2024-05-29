@@ -40,30 +40,29 @@ export default class BookDetails {
         }; 
 
         let shelf = getLocalStorage('bookshelf');
+        let existing = false; // book not on shelf as default
 
-        // CURRENTLY ALLOWS DUPLICATES TO BE ADDED
-        books.forEach((book) => {
-            if(book.id == id) {
-                shelf.push(book);
-                setLocalStorage('bookshelf', shelf);
+        // Look through the shelf to see if the book was already added
+        for (let i=0; i < shelf.length; i++) {
+            if (shelf[i].id !== id) {
+                continue; // keep looking if not book not found
             }
-        });
+            else {
+                alert('This book is already on your bookshelf');
+                existing = true; // book found on the shelf
+                break; // stop looking for it
+            }
+        }
 
-        // ADDS DUPLICATES ALL AT ONCE - TRY TO FIX THIS!
-        // for (let i=0; i < shelf.length; i++) {
-        //     if (shelf[i].id === id) {
-        //         console.log('Book already on shelf');
-        //         break;
-        //     }
-        //     else {
-        //         books.forEach((book) => {
-        //             if (book.id === id){
-        //                 shelf.push(book);
-        //                 setLocalStorage('bookshelf', shelf); 
-        //             }
-        //         }) 
-        //     }
-        // }
+        // If the book is not already on the shelf, add it
+        if (existing === false) {
+            books.forEach((book) => {
+                if (book.id === id){
+                    shelf.push(book);
+                    setLocalStorage('bookshelf', shelf); 
+                }
+            }) 
+        }
     }
 }
 
