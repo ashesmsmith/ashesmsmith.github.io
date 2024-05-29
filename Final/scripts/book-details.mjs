@@ -37,16 +37,33 @@ export default class BookDetails {
         // Find or create bookshelf in localStorage
         if (!getLocalStorage('bookshelf')) {
             setLocalStorage('bookshelf', []);
-        } 
+        }; 
 
         let shelf = getLocalStorage('bookshelf');
-        
+
+        // CURRENTLY ALLOWS DUPLICATES TO BE ADDED
         books.forEach((book) => {
-            if (book.id === id) {
+            if(book.id == id) {
                 shelf.push(book);
                 setLocalStorage('bookshelf', shelf);
             }
-        })
+        });
+
+        // ADDS DUPLICATES ALL AT ONCE - TRY TO FIX THIS!
+        // for (let i=0; i < shelf.length; i++) {
+        //     if (shelf[i].id === id) {
+        //         console.log('Book already on shelf');
+        //         break;
+        //     }
+        //     else {
+        //         books.forEach((book) => {
+        //             if (book.id === id){
+        //                 shelf.push(book);
+        //                 setLocalStorage('bookshelf', shelf); 
+        //             }
+        //         }) 
+        //     }
+        // }
     }
 }
 
