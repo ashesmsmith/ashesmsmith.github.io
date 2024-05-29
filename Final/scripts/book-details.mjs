@@ -14,8 +14,7 @@ export default class BookDetails {
         const data = await response.json();
 
         this.books = data.items;
-        this.showResults(this.books);
-        console.log(this.books);
+        this.displayResults(this.books);
 
         // add eventListener to all add-to-shelf buttons
         const addBtns = document.querySelectorAll('#add-to-shelf');
@@ -25,7 +24,7 @@ export default class BookDetails {
         });
     }
 
-    showResults(data) {
+    displayResults(data) {
         const results = document.getElementById('search-results');
         results.innerHTML = ''; //reset results before adding new ones if new search is entered
 

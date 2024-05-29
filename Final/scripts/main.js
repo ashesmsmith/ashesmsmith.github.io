@@ -1,5 +1,6 @@
 import BookDetails from './book-details.mjs';
 import BookShelf from './bookshelf.mjs';
+import Favorites from './favorites.mjs';
 
 // HOMEPAGE
 const homepage = document.querySelector('#homepage');
@@ -21,11 +22,18 @@ function search(event) {
 }
 
 // BOOKSHELF PAGE
-const shelfPage = document.querySelector('#bookshelf-page');
+const bookshelfPage = document.querySelector('#bookshelf-page');
 
-if (shelfPage) {
-    let bookshelf = new BookShelf('bookshelf');
-    const bookshelfPage = document.querySelector('#bookshelf-page');
-    
+if (bookshelfPage) {
+    let bookshelf = new BookShelf('bookshelf');    
     bookshelfPage.addEventListener('onload', bookshelf.init());
+}
+
+
+// FAVORITES PAGE
+const favoritesPage = document.querySelector('#favorites-page');
+
+if (favoritesPage) {
+    let favoriteList = new Favorites('json/favorites.json');
+    favoriteList.init();
 }
