@@ -182,7 +182,7 @@ h2, h3 {
 }
 
 .spin {
-
+    animation: buttonSpin 1s linear 0s 2 alternate;
 }
 
 /* FOOTER */
@@ -194,4 +194,13 @@ footer {
 
 @keyframes buttonSpin {
     /* DO THIS NEXT */
+    50% {
+        transform: rotate(25deg);
+        background-color: #B392AC;
+    }
+
+    100% {
+        transform: rotate(-25deg);
+        background-color: #735D78;
+    }
 }

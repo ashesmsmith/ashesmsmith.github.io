@@ -14,7 +14,7 @@ export default class Favorites {
         const addBtns = document.querySelectorAll('#add-to-shelf');
         addBtns.forEach((button) => {
             let btnId = button.getAttribute('data-id'); // get id from btn clicked
-            button.addEventListener('click', () => this.addToShelf(data, btnId));
+            button.addEventListener('click', () => this.addToShelf(data, btnId, button));
         });
     }
 
@@ -27,7 +27,7 @@ export default class Favorites {
         })
     }
 
-    addToShelf(books, id) {   
+    addToShelf(books, id, button) {   
         // Find or create bookshelf in localStorage
         if (!getLocalStorage('bookshelf')) {
             setLocalStorage('bookshelf', []);
@@ -53,6 +53,7 @@ export default class Favorites {
             books.forEach((book) => {
                 if (book.id === id){
                     shelf.push(book);
+                    button.classList.toggle('spin');
                     setLocalStorage('bookshelf', shelf); 
                 }
             }) 
