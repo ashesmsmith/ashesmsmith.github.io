@@ -93,7 +93,7 @@ function favoritesTemplate(book) {
         ? book.volumeInfo.industryIdentifiers[0].identifier: 'Unavailable';
 
     return `<section class="book-card">
-        <a href="${previewLink}">
+        <a href="${previewLink}" target="_blank">
             <img 
                 class="cover-img" 
                 src="${coverImage}"
@@ -108,7 +108,7 @@ function favoritesTemplate(book) {
         </div>
         <p class="book-desc">${description}</p>
         <div class="results-btns buttons">
-            <a class="preview-link" href="${previewLink}"><button>${btnText}</button></a>
+            <a class="preview-link" href="${previewLink}" target="_blank"><button>${btnText}</button></a>
             <button id="add-to-shelf" data-id=${id}>Add to Bookshelf</button>
         </div>
     </section>`

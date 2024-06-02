@@ -50,7 +50,7 @@ function bookshelfTemplate(book) {
     const author = book.volumeInfo.authors ?? 'Author Unavailable';
 
     return `<section class="shelf-card">
-        <a href="${previewLink}">
+        <a href="${previewLink}" target="_blank">
             <img 
                 class="cover-img" 
                 src="${coverImage}"
